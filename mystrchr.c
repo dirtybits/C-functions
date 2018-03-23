@@ -35,14 +35,14 @@ int main(){
 
 char *mystrchr (const char *str, int character){
 
-    char *ptr = (char*) str;       // cast away constness of str pointer
+    char *ptr = (char*) str;       
     int i = 0;
 
     while (ptr[i] != '\0'){
-        if (ptr[i] == character){ // if the char is found
-            return &ptr[i];       // return the address it was found at
-        }                         // and exit function
-        i++;                      // otherwise keep iterating
+        if (ptr[i] == character){ 
+            return &ptr[i];       
+        }                         
+        i++;                      
     }
-    return NULL;                  // if character not found, return NULL  
+    return NULL;                    
 }
