@@ -10,8 +10,8 @@ int main(){
     char str2[50] = " concatenated text"; 
     char str3[50] = ", WOW!";
 
-    mystrcat(str1, str2);  // appends str2 to str1
-    mystrcat(str1, str3);  // appends str3 to the newly concatenated str1
+    mystrcat(str1, str2);  
+    mystrcat(str1, str3);  
 
     printf("%s",str1);
 
@@ -23,17 +23,17 @@ char *mystrcat(char *destination, const char *source){
     // set counters
     int i = 0;
     int j = 0;
-    // iterate to the end of the destination string
-    while (destination[i] != '\0'){ 
+    
+    while (destination[i]){ 
         i++;
     }
-    while (source[j] != '\0'){         // while source does not point to '\0'
-        destination[i+j] = source[j];  // append it to end of destination
+    while (source[j]){         '
+        destination[i+j] = source[j]; 
         j++;
     }
-    destination[i+j] = '\0'; // set null terminator for resulting string
+    destination[i+j] = '\0'; 
 
-   return destination;       // return resulting string
+   return destination;      
 
 }
 
