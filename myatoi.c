@@ -21,26 +21,24 @@ int main ()
 
 int myatoi(const char* str){
 
-    int i = 0;       // initilize counter variable
-    int num = 0;     // initilize resulting number
-    int sign = 1;    // sign of result     
+    int i = 0;       
+    int num = 0;     
+    int sign = 1;     
 
-    if (str == NULL)           // if string is null return 0;
+    if (str == NULL)          
         return 0;
-    if (str[0] == '-'){         // if initial char is '-'
-        sign = -1;              // set sign to negative
-        i++;                    // update so we don't get stuck in loop
-    }
-    else if (str[0] == '+'){    // if initial char is '+' skip to next element
+    if (str[0] == '-'){         
+        sign = -1;            
         i++;                    
     }
-    while(isdigit(str[i])){      // iterate through string      
+    else if (str[0] == '+'){    
+        i++;                    
+    }
+    while(isdigit(str[i])){      
         num = (num*10) + (str[i] - '0');
         i++;
     }
     return sign*num;
 }
 
-/* btw you never have to do  != '\0' 
-https://repl.it/repls/GregariousClientsideProgrammingtool
-*/
+
